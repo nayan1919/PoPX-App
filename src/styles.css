@@ -1,0 +1,21 @@
+.card {
+  width: 350px;
+  padding: 2rem;
+  background: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin: 50px auto;
+}
+
+.btn-primary {
+  background: #7b47ff;
+  color: white;
+}
+
+.btn-secondary {
+  background: #e1d8ff;
+  color: #7b47ff;
+}
