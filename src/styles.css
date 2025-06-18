@@ -2,105 +2,112 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
 }
+
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f9f9f9;
+  background-color: #f2f2f2;
+  padding: 20px;
 }
 
 .card {
-  width: 90%;
-  max-width: 350px;
-  padding: 2rem;
-  background: white;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  border-radius: 6px;
+  max-width: 500px;
+  margin: auto;
+  background: #fff;
+  padding: 30px 25px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  animation: slideIn 0.5s ease-in-out;
+}
+
+.card-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.form-container {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
-  margin: 50px auto;
+  gap: 12px;
+}
+
+label {
+  font-weight: 500;
+  margin-bottom: 5px;
 }
 
 input {
   padding: 10px;
+  font-size: 14px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  transition: all 0.3s ease;
 }
 
-button {
-  padding: 10px;
-  border-radius: 4px;
-  border: none;
-  cursor: pointer;
-  margin-top: 10px;
+input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.4);
 }
 
-.btn-primary {
-  background: #7b47ff;
-  color: white;
+.input-error {
+  border-color: red;
 }
 
-.btn-secondary {
-  background: #e1d8ff;
-  color: #7b47ff;
-}
-
-.btn-disabled {
-  background: #d1d5db;
-  color: white;
-  cursor: not-allowed;
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: -8px;
+  margin-bottom: 8px;
 }
 
 .radio-group {
   display: flex;
-  gap: 1rem;
+  gap: 20px;
 }
 
-.profile {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
+.btn-primary {
+  padding: 12px;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s;
 }
 
-.avatar {
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
+.btn-primary:hover {
+  background-color: #0056b3;
 }
 
-@media only screen and (min-width: 768px) {
+/* 🎯 Responsive Breakpoints */
+@media only screen and (max-width: 768px) {
   .card {
-    max-width: 600px;
-    padding: 2.5rem;
+    padding: 20px;
   }
 
-  input, button {
+  .btn-primary {
     font-size: 16px;
   }
-
-  .profile {
-    flex-direction: row;
-    align-items: center;
-  }
 }
-
 
 @media only screen and (min-width: 1200px) {
   .card {
-    max-width: 800px;
-    padding: 3rem;
+    max-width: 600px;
   }
+}
 
-  h2 {
-    font-size: 28px;
+/* 🌀 Animation */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
   }
-
-  input, button {
-    font-size: 18px;
-  }
-
-  .profile p {
-    font-size: 16px;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
