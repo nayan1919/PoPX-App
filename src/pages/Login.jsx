@@ -9,7 +9,7 @@ const Login = () => {
       <label className='jonty'>Email Address</label>
       <input type="email" placeholder="Enter email address" />
       <label className='jonty'>Password</label>
-      <input type="password" placeholder="Enter password" />
+      <input type="password" placeholder="Enter password" autoComplete="current-password" />
       <button className="btn-disabled" disabled onClick={() => navigate('/profile')}>Login</button>
     </div>
   );

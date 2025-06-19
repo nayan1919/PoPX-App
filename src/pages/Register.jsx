@@ -87,6 +87,7 @@ const Register = () => {
                     onChange={handleChange}
                     placeholder="Marry Doe"
                     className={errors.password ? 'input-error' : ''}
+                    autoComplete="new-password"
                 />
                 {errors.password && <p className="error">{errors.password}</p>}
 
